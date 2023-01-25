@@ -8,20 +8,38 @@ body {
     display: flex;
     flex-direction: column;
     */
+    position: relative;
     background-color: #15151F;
 }
 
 header {
     background-image: url(../images/bg-mobile-dark.jpg);
     background-size: cover;
-    object-fit: ;
+    /* object-fit: ; */
     background-repeat: no-repeat;
     height: 30vh;
-    width: 100%;
+    width: 100vh;
     background-color: red;
 }
 
 main {
     height: 70vh;
     
+}
+
+main div#todo-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.26);
+    display: grid;
+    place-items: center;
+}
+
+main div#todo-container #test {
+    width: 100px;
+    height: 100px;
+    background-color: black;
 }
