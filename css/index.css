@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /*
+    display: flex;
+    flex-direction: column;
+    */
+    background-color: #15151F;
+}
+
+header {
+    background-image: url(../images/bg-mobile-dark.jpg);
+    background-size: cover;
+    object-fit: ;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 100%;
+    background-color: red;
+}
+
+main {
+    height: 70vh;
+    
+}

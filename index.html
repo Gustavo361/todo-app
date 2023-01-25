@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <title>TODO app</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div id="todo-container" style="display: none;">
+            <div id="todo">
+                <header>
+                    <span>TODO</span>
+                    <i>*</i>
+                </header>
+                <div id="new-task">
+                    <input type="checkbox" name="" id="new-task-input">
+                    <input type="text" placeholder="Create a new todo...">
+                    <i>add</i>
+                    <i>X</i>
+                </div>
+                <template>
+                    <input type="checkbox" name="" id="new-task-input">
+                    <input type="text" placeholder="Create a new todo...">
+                    <i>add</i>
+                    <i>X</i>
+                </template>
+                <ul id="all-tasks">
+                    <li><input type="text" placeholder="1"></li>
+                    <li><input type="text" placeholder="2"></li>
+                    <li><input type="text" placeholder="3"></li>
+                    <li><input type="text" placeholder="4"></li>
+                    <li><input type="text" placeholder="5"></li>
+                </ul>
+                <div>
+                    <span>5 items left</span>
+                    <button>Clear completed</button>
+                </div>
+                <div id="view-options">
+                    <button>All</button>
+                    <button>Active</button>
+                    <button>Completed</button>
+                </div>
+                <span>Drag and drop to reorder list</span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
