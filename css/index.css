@@ -4,42 +4,33 @@
 }
 
 body {
-    /*
-    display: flex;
-    flex-direction: column;
-    */
-    height: 100vh;
+    width: 100%;
+    /* height: 100vh; */
     position: relative;
     background-color: #15151F;
 }
 
 header {
+    width: auto;
+    height: 30vh;
     background-image: url(../images/bg-mobile-dark.jpg);
     background-size: cover;
-    /* object-fit: ; */
     background-repeat: no-repeat;
-    height: 30vh;
-    /* width: auto; */
-    background-color: red;
+    /* object-fit: ; */
 }
 
 main {
-    height: 70vh;
-    
-}
-
-main div#todo-container {
-    height: 100%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 128, 0, 0.485);
-    display: grid;
-    place-items: center;
+    /* background-color: rgba(0, 128, 0, 0.596); */
 }
 
-main div#todo-container #test {
+main #test {
     width: 100px;
     height: 100px;
     background-color: black;
