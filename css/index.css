@@ -18,7 +18,7 @@ header {
     /* object-fit: ; */
     background-repeat: no-repeat;
     height: 30vh;
-    width: 100vh;
+    /* width: auto; */
     background-color: red;
 }
 
@@ -28,12 +28,12 @@ main {
 }
 
 main div#todo-container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(255, 0, 0, 0.26);
+    background-color: rgba(0, 128, 0, 0.486);
     display: grid;
     place-items: center;
 }
@@ -42,4 +42,5 @@ main div#todo-container #test {
     width: 100px;
     height: 100px;
     background-color: black;
+    color: white;
 }
