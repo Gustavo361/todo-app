@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     */
+    height: 100vh;
     position: relative;
     background-color: #15151F;
 }
@@ -33,7 +34,7 @@ main div#todo-container {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 128, 0, 0.486);
+    background-color: rgba(0, 128, 0, 0.485);
     display: grid;
     place-items: center;
 }
