@@ -72,8 +72,8 @@ main div#todo #new-task {
     /* padding: 2.6%; */
     border-radius: 5px;
     margin-bottom: 5%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
 
 main div#todo #new-task #new-task-container {
@@ -136,8 +136,8 @@ main div#todo ul li {
     /* padding: 2.6%; */
     /* padding-left: 2.6%; */
     padding-right: 0%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
 
 main div#todo ul li:first-child{
