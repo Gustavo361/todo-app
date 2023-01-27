@@ -1,0 +1,1 @@
+botão + da new task fica invivel, so qnd estiver escrevendo ou com mouse hover aparece

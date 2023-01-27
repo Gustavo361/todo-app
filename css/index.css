@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 body {
     width: 100%;
     /* height: 100vh; */
     position: relative;
-    background-color: #15151F;
+    background-color: hsl(235, 21%, 11%)
 }
 
 header {
@@ -20,19 +23,221 @@ header {
 }
 
 main {
+    width: 100%;
+    height: 100vh;
     display: grid;
     place-items: center;
-    height: 100vh;
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     /* background-color: rgba(0, 128, 0, 0.596); */
 }
 
-main #test {
-    width: 100px;
-    height: 100px;
-    background-color: black;
+main div#todo {
+    width: 90%;
+}
+
+main div#todo header {
+    background-image: none;
+    height: initial;
+    width: initial;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFDFF;
+    padding-bottom: 7%;
+}
+
+main div#todo header h1 {
+    font-weight: 500;
+    /* font-size: 18px; */
+    letter-spacing: 8px;
+}
+
+main div#todo header ion-icon[name="moon"] {
+    display: none;
+}
+
+main div#todo header ion-icon[name="sunny"] {
+    display: block;
+    font-size: 26px;
+    /* background-color: red; */
+}
+
+main div#todo #new-task {
+    background-color: #25273C;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 2.6%; */
+    border-radius: 5px;
+    margin-bottom: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+main div#todo #new-task #new-task-container {
+    width: 90%;
+    display: flex;
+    /* background-color: yellow; */
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+main div#todo #new-task ion-icon[name="add"] {
+    /* background-color: red; */
+    color: #FFFDFF;
+}
+
+main div#todo #new-task input[type="checkbox"] {
+    /* border-color: red;
+    border: 1px solid red;
+    border-radius: 50px;
+    cursor: pointer; */
+    margin-right: 2%;
+}
+
+main div#todo #new-task #new-task-container input[type="text"] {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+main div#todo #new-task #new-task-container input[type="text"]:focus {}
+
+main div#todo #new-task ion-icon[name="close-outline"] {
+    background-color: red;
+    display: none;
+    color: #FFFDFF;
+}
+
+main div#todo ul {
+    width: auto;
+    /* padding-left: 2.6%;
+    padding-right: 2.6%; */
+    list-style: none;
+    background-color: #25273C;
+    /* border-top: 1px solid grey; */
+    /* background-color: orange; */
+    /* display: flex;
+    flex-direction: column; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+main div#todo ul li {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid grey;
+    /* padding: 2.6%; */
+    /* padding-left: 2.6%; */
+    padding-right: 0%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+main div#todo ul li:first-child{
+    border-top: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* background-color: transparent; */
+}
+
+main div#todo ul li ion-icon[name="close-outline"] {
+    margin-right: 2.6%;
+    color: grey;
+}
+
+main div#todo ul li input[type="checkbox"]{
+    margin-right: 2%;
+    margin-left: 2.6%;
+    /* width: 3.5%; */
+    /* display: none; */
+}
+
+main div#todo ul li input[type="text"] {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    /* padding-top: 2.6%;
+    padding-bottom: 2.6%; */
+}
+
+main div#todo #item-clear-container {
+    padding: 2.6%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #25273C;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 5%;
+}
+
+main div#todo #item-clear-container span {
+    background-color: transparent;
+}
+
+main div#todo #item-clear-container span:hover {
+    color: inherit;
+}
+
+main div#todo #item-clear-container button {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+main div#todo #item-clear-container button:hover {
+    color: white;
+}
+
+main div#todo #view-options-container {
+    padding: 2.6%;
+    /* background-color: red; */
+    background-color: #25273C;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    /* padding-left: 40%;
+    padding-right: 40%; */
+}
+
+main div#todo #view-options {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+
+}
+
+main div#todo #view-options button {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    cursor: pointer;
+}
+
+main div#todo #view-options button:hover {
+    color: hsl(220, 98%, 61%)
+}
+
+main div#todo span {
+    display: block;
+    text-align: center;
+    color: grey;
+}
+
+main div#todo span:hover{
+    cursor: context-menu;
     color: white;
 }

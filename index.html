@@ -14,45 +14,70 @@
     <header></header>
     <main>
 
-        <div id="test">testing</div>
-
-        <div id="todo" style="display: none;">
+        <div id="todo">
             <header>
-                <span>TODO</span>
-                <i>*</i>
+                <h1>TODO</h1>
+                <ion-icon name="sunny"></ion-icon>
+                <ion-icon name="moon"></ion-icon>
             </header>
             <div id="new-task">
-                <input type="checkbox" name="" id="new-task-input">
-                <input type="text" placeholder="Create a new todo...">
-                <i>add</i>
-                <i>X</i>
+                <div id="new-task-container">
+                    <input type="checkbox" name="new-task-input" id="new-task-input">
+                    <input type="text" placeholder="Create a new todo...">
+                </div>
+                <ion-icon name="add"></ion-icon>
+                
             </div>
             <template>
                 <input type="checkbox" name="" id="new-task-input">
                 <input type="text" placeholder="Create a new todo...">
                 <i>add</i>
-                <i>X</i>
+                <ion-icon name="close-outline"></ion-icon>
             </template>
             <ul id="all-tasks">
-                <li><input type="text" placeholder="1"></li>
-                <li><input type="text" placeholder="2"></li>
-                <li><input type="text" placeholder="3"></li>
-                <li><input type="text" placeholder="4"></li>
-                <li><input type="text" placeholder="5"></li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <input type="text" placeholder="1">
+                    <ion-icon name="close-outline"></ion-icon>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <input type="text" placeholder="2">
+                    <ion-icon name="close-outline"></ion-icon>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <input type="text" placeholder="3">
+                    <ion-icon name="close-outline"></ion-icon>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <input type="text" placeholder="4">
+                    <ion-icon name="close-outline"></ion-icon>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <input type="text" placeholder="5">
+                    <ion-icon name="close-outline"></ion-icon>
+                </li>
             </ul>
-            <div>
+            <div id="item-clear-container">
                 <span>5 items left</span>
-                <button>Clear completed</button>
+                <button>Clear Completed</button>
             </div>
-            <div id="view-options">
-                <button>All</button>
-                <button>Active</button>
-                <button>Completed</button>
+            <div id="view-options-container">
+                <div id="view-options">
+                    <button>All</button>
+                    <button>Active</button>
+                    <button>Completed</button>
+                </div>
             </div>
             <span>Drag and drop to reorder list</span>
         </div>
 
     </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
