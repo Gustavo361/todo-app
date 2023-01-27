@@ -137,7 +137,7 @@ main div#todo ul {
 main div#todo ul li {
     width: 100%;
     display: flex;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgba(128, 128, 128, 0.247);
     /* padding: 2.6%; */
     /* padding-left: 2.6%; */
     /* padding-right: 0%; */
@@ -167,6 +167,11 @@ main div#todo ul li input[type="checkbox"]{
     margin-left: 6%;
     /* width: 3.5%; */
     /* display: none; */
+}
+
+main div#todo ul li input[type="checkbox"]:checked + input[type="text"]{
+    text-decoration: line-through;
+    color: grey;
 }
 
 main div#todo ul li input[type="text"] {
@@ -236,8 +241,12 @@ main div#todo #view-options button {
 }
 
 main div#todo #view-options button:hover {
-    color: hsl(220, 98%, 61%)
+    color: white
 }
+
+/* main div#todo #view-options button.active {
+    color: hsl(220, 98%, 61%)
+} */
 
 main div#todo span {
     display: block;
