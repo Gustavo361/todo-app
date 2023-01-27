@@ -52,6 +52,7 @@ main div#todo header h1 {
     font-weight: 500;
     /* font-size: 18px; */
     letter-spacing: 8px;
+    color: green;
 }
 
 main div#todo header ion-icon[name="moon"] {
