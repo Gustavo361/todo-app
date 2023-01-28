@@ -99,7 +99,7 @@ main div#todo #new-task input[type="checkbox"] {
     border: 1px solid red;
     border-radius: 50px;
     cursor: pointer; */
-    margin-right: 2%;
+    margin-right: 4%;
     width: 20px;
     height: 20px;
     background-color: transparent;
@@ -145,6 +145,7 @@ main div#todo ul {
 main div#todo ul li {
     width: 100%;
     display: flex;
+    align-items: center;
     border-top: 1px solid rgba(128, 128, 128, 0.247);
     /* padding: 2.6%; */
     /* padding-left: 2.6%; */
@@ -171,7 +172,7 @@ main div#todo ul li ion-icon[name="close-outline"]:hover {
 }
 
 main div#todo ul li input[type="checkbox"]{
-    margin-right: 2%;
+    margin-right: 4%;
     margin-left: 6%;
     border-radius: 50%;
     width: 24px;
@@ -181,7 +182,7 @@ main div#todo ul li input[type="checkbox"]{
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid grey;
 
     /* width: 24px; height: 20px; */
   /* background: radial-gradient(to bottom,  black, green); */
@@ -192,15 +193,17 @@ main div#todo ul li input[type="checkbox"]{
     border-image-slice: 9; */
 }
 
-main div#todo ul li input[type="checkbox"]:hover{}
+main div#todo ul li input[type="checkbox"]:hover{
+    border-color: white;
+}
 
 main div#todo ul li input[type="checkbox"]:checked {
-    background: rgb(87,221,255);
-    background: linear-gradient(0deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+    /* background: rgb(87,221,255);
+    background: linear-gradient(0deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%); */
     
-    /* content: '\002714'; */
-    /* background-image: url(../images/icon-check.svg);
-    background-repeat: no-repeat; */
+    background-image: url(../images/icon-check.svg), linear-gradient(0deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 main div#todo ul li input[type="checkbox"]:checked + input[type="text"]{
