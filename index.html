@@ -22,48 +22,50 @@
             </header>
             <div id="new-task">
                 <div id="new-task-container">
-                    <input type="checkbox" name="new-task-input" id="new-task-input">
-                    <input type="text" placeholder="Create a new todo...">
+                    <input type="checkbox" name="new-task-input" class="completed-input">
+                    <input type="text" placeholder="Create a new todo..." id="add-new-task-input" class="new-task-input">
                 </div>
-                <ion-icon name="add"></ion-icon>
+                <ion-icon name="add" id="add-task"></ion-icon>
                 
             </div>
-            <template>
-                <li draggable="true">
-                    <input type="checkbox" name="" id="new-task-input">
-                    <input type="text" placeholder="Create a new todo...">
+
+            <template id="task-template">
+                <li draggable="true" class="draggable" draggable="true">
+                    <input type="checkbox" name="" class="completed-input">
+                    <input type="text" class="new-task-input input-done" placeholder="your todo...">
                     <ion-icon name="close-outline"></ion-icon>
                 </li>
             </template>
+
             <ul id="all-tasks">
-                <li draggable="true">
+                <li class="draggable" draggable="true">
                     <input type="checkbox" name="" id="">
-                    <input type="text" placeholder="1">
+                    <input type="text" class="task-itself" placeholder="1" value="task">
                     <ion-icon name="close-outline"></ion-icon>
                 </li>
-                <li draggable="true">
+                <!-- <li class="draggable" draggable="true">
                     <input type="checkbox" name="" id="">
-                    <input type="text" placeholder="2">
+                    <input type="text" class="task-itself" placeholder="2">
                     <ion-icon name="close-outline"></ion-icon>
-                </li>
-                <li draggable="true">
+                </li> -->
+                <!-- <li class="draggable" draggable="true">
                     <input type="checkbox" name="" id="">
                     <input type="text" placeholder="3">
                     <ion-icon name="close-outline"></ion-icon>
                 </li>
-                <li draggable>
+                <li class="draggable" draggable="true">
                     <input type="checkbox" name="" id="">
                     <input type="text" placeholder="4">
                     <ion-icon name="close-outline"></ion-icon>
                 </li>
-                <li draggable="true">
+                <li class="draggable" draggable="true">
                     <input type="checkbox" name="" id="">
                     <input type="text" placeholder="5">
                     <ion-icon name="close-outline"></ion-icon>
-                </li>
+                </li> -->
             </ul>
             <div id="item-clear-container">
-                <span>5 items left</span>
+                <span id="total-items"></span>
                 <button>Clear Completed</button>
             </div>
             <div id="view-options-container">

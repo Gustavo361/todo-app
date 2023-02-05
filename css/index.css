@@ -140,6 +140,8 @@ main div#todo ul {
     flex-direction: column; */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+
+    /* border: 1px solid black; */
 }
 
 main div#todo ul li {
@@ -152,6 +154,14 @@ main div#todo ul li {
     /* padding-right: 0%; */
     padding-top: 6%;
     padding-bottom: 6%;
+}
+
+main div#todo ul li.draggable {
+    cursor: move;
+}
+
+main div#todo ul li.draggable.dragging {
+    /* background-color: red; */
 }
 
 main div#todo ul li:first-child{
