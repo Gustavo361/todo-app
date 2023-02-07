@@ -1,0 +1,35 @@
+body.light {
+    background-color: white;
+}
+
+header.light {
+    /* background-color: red; height: 50%; width: 60%; */
+    background-image: url(../images/bg-mobile-light.jpg);
+}
+
+/* main div#todo ul.light {
+    background-color: white;
+    display: none;
+} */
+
+main div#todo #all-tasks.light {
+    background-color: white;
+    color: black;
+    /* padding: 5%; */
+}
+
+main div#todo #new-task.light {
+    background-color: white;
+}
+
+main div#todo ul li input[type="text"].light{
+
+}
+
+main div#todo #item-clear-container.light {
+    background-color: white;
+}
+main div#todo #view-options-container.light {
+    background-color: white;
+}
+

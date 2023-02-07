@@ -66,6 +66,7 @@ main div#todo header ion-icon[name="sunny"] {
 
 main div#todo #new-task {
     background-color: #25273C;
+    /* background-color: white; */
     /* background-color: green; */
     display: flex;
     justify-content: space-between;
@@ -128,7 +129,7 @@ main div#todo #new-task ion-icon[name="close-outline"] {
     font-size: 22px;
 }
 
-main div#todo ul {
+main div#todo #all-tasks {
     width: auto;
     /* padding-left: 2.6%;
     padding-right: 2.6%; */
