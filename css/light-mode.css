@@ -6,7 +6,14 @@ header.light {
     /* background-color: red; height: 50%; width: 60%; */
     background-image: url(../images/bg-mobile-light.jpg);
 }
+main div#todo header ion-icon[name="moon"].light {
+    display: block;
+}
 
+main div#todo header ion-icon[name="sunny"].light {
+    display: none;
+    /* background-color: red; */
+}
 /* main div#todo ul.light {
     background-color: white;
     display: none;
@@ -15,21 +22,74 @@ header.light {
 main div#todo #all-tasks.light {
     background-color: white;
     color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* padding: 5%; */
 }
 
 main div#todo #new-task.light {
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-main div#todo ul li input[type="text"].light{
+main div#todo ul li input[type="text"].light {}
 
+
+main div#todo #new-task input[type="checkbox"].light {
+    border-color: red;
 }
+
 
 main div#todo #item-clear-container.light {
     background-color: white;
-}
-main div#todo #view-options-container.light {
-    background-color: white;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2)
+/* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+    /* box-shadow: 0 4px 8px 0 , 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
+main div#todo #view-options-container.light {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+main div#todo ul li ion-icon[name="close-outline"].light {
+    /* color: grey; */
+    color: green;
+}
+
+.close-task {
+    color: orangered;
+}
+main div#todo #item-clear-container #span-clear:hover.light {
+    color: black;
+}
+
+main div#todo #span-drag-drop.light:hover {
+    color: black;
+}
+#item-clear-container #total-items.light:hover{
+    color: black;
+}
+main div#todo #new-task ion-icon[name="add"].light{
+
+}
+main div#todo #new-task input[type="checkbox"].light{
+
+}
+main div#todo #new-task ion-icon[name="close-outline"].light{
+
+}
+
+main div#todo ul li input[type="checkbox"].light:hover{
+    border-color: black;
+}
+
+/*
+
+main div#todo ul li ion-icon[name="close-outline"].light {
+    color: red;
+}
+
+main div#todo ul li ion-icon[name="close-outline"]:hover {
+    color: white;
+}
+*/

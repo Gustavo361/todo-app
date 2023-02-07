@@ -14,7 +14,7 @@ const viewCompleted = document.getElementById('view-options').querySelectorAll('
 const viewOptionsContainer = document.getElementById('view-options-container')
 
 const btnsDelete = document.getElementsByName('close-outline')
-const btnsDeleteArray = Array.from(btnsDelete)
+// const btnsDeleteArray = Array.from(btnsDelete)
 
 window.addEventListener('load', () => {
     for (const [key, value] of Object.entries(localStorage)) {
@@ -22,10 +22,26 @@ window.addEventListener('load', () => {
         clone.querySelector('.new-task-input').value = value
         containerAllTasks.prepend(clone)
         countAllItems()
+        // btnsDelete.forEach(btn => {
+        //     btn.addEventListener('click', e => {
+        //         containerAllTasks.removeChild(e.target.parentNode)
+        //         removeKeyByValue(e.target.parentNode.children[1].value)
+        //         countAllItems()
+        //         deleteTasks()
+        //     })
+        // })
+        deleteTasks()
     }
 })
 
-
+function deleteTasks(){
+    btnsDelete.forEach(btn => {
+    btn.addEventListener('click', e => {
+        containerAllTasks.removeChild(e.target.parentNode)
+        removeKeyByValue(e.target.parentNode.children[1].value)
+        countAllItems()
+    })
+})}
 
 function addNewTask() {
     if (addNewTaskInput.value == '' || addNewTaskInput == null) {
@@ -37,6 +53,21 @@ function addNewTask() {
         containerAllTasks.prepend(clone)
         countAllItems()
         addNewTaskInput.value = null
+        // btnsDelete.forEach(btn => {
+        //     btn.addEventListener('click', e => {
+        //         containerAllTasks.removeChild(e.target.parentNode)
+        //         removeKeyByValue(e.target.parentNode.children[1].value)
+        //         countAllItems()
+        //     })
+        // })
+
+        deleteTasks()
+
+        for (let i = 0; i < doneInputs.length; i++) {
+            doneInputs[i].addEventListener('click', function() {
+                this.classList.toggle('new-task-input light');
+            });
+        }
     }
 }
 
@@ -47,10 +78,20 @@ btnAddTask.addEventListener('click', (e) => {
 addNewTaskInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {addNewTask()}
 })
-
+// itemClear.style.borderTopLeftRadius = '5px'
+//         itemClear.style.borderTopRightRadius = '5px'
 function countAllItems() {
     let allItems = containerAllTasks.children.length.toString()
     numberItems.innerText = `${allItems} items left`
+
+    if (allItems == 0) {
+        itemClear.style.borderTopLeftRadius = '5px'
+        itemClear.style.borderTopRightRadius = '5px'
+        console.log('radius')
+    } else {
+        itemClear.style.borderTopLeftRadius = '0px'
+        itemClear.style.borderTopRightRadius = '0px'
+    }
 }
 
 function taskToStorage(task) {
@@ -109,7 +150,15 @@ clearDone.addEventListener('click', () => {
     }
 })
 
-viewAll.addEventListener('click', () => {
+function activeView(target) {
+    viewAll.classList.remove('active')
+    viewActives.classList.remove('active')
+    viewCompleted.classList.remove('active')
+
+    target.classList.add('active')
+}
+
+viewAll.addEventListener('click', (e) => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]')
 
     for (const checkbox of checkboxes) {
@@ -117,10 +166,14 @@ viewAll.addEventListener('click', () => {
 
         li.style.display = 'flex'
         // countAllItems()
+        console.log(e.currentTarget)
+        console.log(e.target)
+        let target = e.currentTarget
+        activeView(target)
     }
 })
 
-viewActives.addEventListener('click', () => {
+viewActives.addEventListener('click', (e) => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]')
 
     for (const li of containerAllTasks.querySelectorAll('li')) {
@@ -137,9 +190,12 @@ viewActives.addEventListener('click', () => {
             // countAllItems()
         }
     }
+
+    let target = e.currentTarget
+        activeView(target)
 })
 
-viewCompleted.addEventListener('click', () => {
+viewCompleted.addEventListener('click', (e) => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]')
 
     for (const li of containerAllTasks.querySelectorAll('li')) {
@@ -153,15 +209,18 @@ viewCompleted.addEventListener('click', () => {
             // countAllItems()
         }
     }
+
+    let target = e.currentTarget
+    activeView(target)
 })
 
-btnsDeleteArray.forEach(btn => {
-    btn.addEventListener('click', e => {
-        containerAllTasks.removeChild(e.target.parentNode)
-        removeKeyByValue(e.target.parentNode.children[1].value)
-        countAllItems()
-    })
-})
+// btnsDeleteArray.forEach(btn => {
+//     btn.addEventListener('click', e => {
+//         containerAllTasks.removeChild(e.target.parentNode)
+//         removeKeyByValue(e.target.parentNode.children[1].value)
+//         countAllItems()
+//     })
+// })
 
 // for (let i = 0; i < btnsDeleteArray.length; i++) {
 //     btnsDeleteArray[i].addEventListener('click', function(e) {
@@ -347,20 +406,51 @@ btnsDeleteArray.forEach(btn => {
 // refreshList()
 // console.log(items)
 
+// const doneInputs = containerAllTasks.querySelector('li').querySelectorAll('input[type="text"]')
 
 const btnSunny = document.getElementsByName('sunny')[0]
+const btnMoon = document.getElementsByName('moon')[0]
 const body = document.body
 const header = document.querySelector('header')
 // const newTask = document.getElementById('new-task')
 const newTaskContainer = document.getElementById('new-task')
-console.log()
+const closeBtns = document.getElementsByClassName('close-task')
+const spanClear = document.getElementById('span-clear')
+// const totalItems = document.getElementById('total-items')
+const spanDragDrop = document.getElementById('span-drag-drop')
+
+function toggleTheme() {
+       // completedInput.classList.toggle('light')
+       newTaskContainer.classList.toggle('light')
+       body.classList.toggle('light');
+       header.classList.toggle('light')
+       // newTask.classList.toggle('light')
+       containerAllTasks.classList.toggle('light')
+       itemClear.classList.toggle('light')
+       viewOptionsContainer.classList.toggle('light')
+       spanClear.classList.toggle('light')
+       spanDragDrop.classList.toggle('light')
+       // btnsDelete.classList.toggle('close-task md hydrated light')
+       // closeBtns.classList.toggle('light')
+       // doneInputs.classList.toggle('light')
+       // newTaskInput.classList.toggle('new-task-input light')
+       // for (doneInput of doneInputs) {
+       //     doneInput.classList.toggle('light')
+       // }
+       btnMoon.classList.toggle('light')
+       btnSunny.classList.toggle('light')
+}
 
 btnSunny.addEventListener('click', () => {
-    newTaskContainer.classList.toggle('light')
-    body.classList.toggle('light');
-    header.classList.toggle('light')
-    // newTask.classList.toggle('light')
-    containerAllTasks.classList.toggle('light')
-    itemClear.classList.toggle('light')
-    viewOptionsContainer.classList.toggle('light')
+    toggleTheme()
 })
+
+btnMoon.addEventListener('click', () => {
+    toggleTheme()
+})
+
+for (let i = 0; i < completedInput.length; i++) {
+    completedInput[i].addEventListener('click', function() {
+        this.classList.toggle('light');
+    });
+}

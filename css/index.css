@@ -56,12 +56,12 @@ main div#todo header h1 {
 
 main div#todo header ion-icon[name="moon"] {
     display: none;
+    font-size: 26px;
 }
 
 main div#todo header ion-icon[name="sunny"] {
     display: block;
     font-size: 26px;
-    /* background-color: red; */
 }
 
 main div#todo #new-task {
@@ -91,7 +91,7 @@ ion-icon {
 
 main div#todo #new-task ion-icon[name="add"] {
     /* background-color: red; */
-    color: #FFFDFF;
+    color: grey;
     font-size: 22px;
 }
 
@@ -108,7 +108,7 @@ main div#todo #new-task input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
     outline: none;
-    border: 1px solid white;
+    border: 1px solid grey;
 }
 
 main div#todo #new-task #new-task-container input[type="text"] {
@@ -123,9 +123,9 @@ main div#todo #new-task #new-task-container input[type="text"] {
 main div#todo #new-task #new-task-container input[type="text"]:focus {}
 
 main div#todo #new-task ion-icon[name="close-outline"] {
-    background-color: red;
+    /* background-color: red; */
     /* display: none; */
-    color: #FFFDFF;
+    color: grey;
     font-size: 22px;
 }
 
@@ -178,10 +178,6 @@ main div#todo ul li ion-icon[name="close-outline"] {
     font-size: 28px;
 }
 
-main div#todo ul li ion-icon[name="close-outline"]:hover {
-    color: white;
-}
-
 main div#todo ul li input[type="checkbox"]{
     margin-right: 4%;
     margin-left: 6%;
@@ -205,12 +201,12 @@ main div#todo ul li input[type="checkbox"]{
 }
 
 main div#todo ul li input[type="checkbox"]:hover{
-    border-color: white;
+    /* border-color: white; */
 }
 
 main div#todo ul li input[type="checkbox"]:checked {
     /* background: rgb(87,221,255);
-    background: linear-gradient(0deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%); */
+    background:z linear-gradient(0deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%); */
     
     background-image: url(../images/icon-check.svg), linear-gradient(0deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
     background-repeat: no-repeat;
@@ -227,11 +223,15 @@ main div#todo ul li input[type="text"] {
     width: 100%;
     border: none;
     background-color: transparent;
-    color: white;
+    color: grey;
     outline: none;
     /* padding-top: 2.6%;
     padding-bottom: 2.6%; */
 }
+
+/* main div#todo ul li input[type="text"].light {
+    color: red;
+} */
 
 main div#todo #item-clear-container {
     padding: 6%;
@@ -240,6 +240,8 @@ main div#todo #item-clear-container {
     background-color: #25273C;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     font-size: 12px;
     color: grey;
     margin-bottom: 5%;
@@ -250,7 +252,7 @@ main div#todo #item-clear-container span {
 }
 
 main div#todo #item-clear-container span:hover {
-    color: inherit;
+    color: white;
 }
 
 main div#todo #item-clear-container button {
@@ -266,12 +268,9 @@ main div#todo #item-clear-container button:hover {
 
 main div#todo #view-options-container {
     padding: 6%;
-    /* background-color: red; */
     background-color: #25273C;
     border-radius: 5px;
     margin-bottom: 5%;
-    /* padding-left: 40%;
-    padding-right: 40%; */
 }
 
 main div#todo #view-options {
@@ -288,14 +287,13 @@ main div#todo #view-options button {
     color: grey;
     cursor: pointer;
 }
-
-main div#todo #view-options button:hover {
-    color: white
+main div#todo #view-options button.active {
+    color:rgb(59, 59, 228)
 }
 
-/* main div#todo #view-options button.active {
-    color: hsl(220, 98%, 61%)
-} */
+main div#todo #view-options button:hover {
+    color: rgb(50, 50, 150)
+}
 
 main div#todo span {
     display: block;
